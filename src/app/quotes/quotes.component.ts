@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Quotes } from '../quotes';
+import { Quote } from '@angular/compiler';
 
 
 @Component({
@@ -20,9 +21,25 @@ export class QuotesComponent implements OnInit {
     new Quotes(6, 'Abraham Lincoln', 'In the end, it is not the years in your life that count.It is the life in your years', 'Brenda', new Date(2020, 6, 22),303,56),
   ];
 
-  toggleDetails(index) {
+  toggleDetails(index:any) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
-}
+  }
+  
+  deleteQuote(isComplete:any, index:any) {
+    if (isComplete) {
+      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].author}?`)
+      if (toDelete) {
+        this.quotes.slice(index,1)
+      }
+    }
+  }
+
+  addNewQuote(quote:any) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    quote.completeDate = new Date(quote.completeDate);
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit(): void {
