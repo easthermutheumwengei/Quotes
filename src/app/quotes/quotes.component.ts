@@ -20,7 +20,9 @@ export class QuotesComponent implements OnInit {
     new Quotes(6, 'Abraham Lincoln', 'In the end, it is not the years in your life that count.It is the life in your years', 'Brenda', new Date(2020, 6, 22),303,56),
   ];
 
-
+  toggleDetails(index) {
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+}
   constructor() { }
 
   ngOnInit(): void {
