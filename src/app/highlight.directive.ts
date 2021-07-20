@@ -8,10 +8,10 @@ export class HighlightDirective {
   constructor(private elem: ElementRef) { }
 
   @HostListener("click") onClicks() {
-    this.highlight("yellow")
+    this.highlight('yellow')
   }
-  @HostListener("dbclick") onDoubleClicks() {
-    this.highlight("None ");
+  @HostListener("dblclick") onDoubleClicks() {
+    this.highlight('None');
   }
   private highlight(action: string) {
     this.elem.nativeElement.style.backgroundColor = action;
