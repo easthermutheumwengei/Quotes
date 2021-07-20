@@ -1,19 +1,21 @@
 <div class="container">
-    <div class="card-header bg-black">
+    <div class="card-header text-white text-center">
         <h1>Quotes</h1>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <p>To quote means to repeat someone’s words, attributing them to their originator</p>
-
-            <div *ngFor='let quote of quotes;let i=index'>
-                <h4 id={{i}} appHighlight>{{quote.name}} posted on{{quote.completeDate|date}}</h4>
-                <button (click)='toggleDetails(i)' class="btn btn-info">Toggle Details</button>
-                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-                </app-quote-detail>
+            <h6>
+                <p><strong>To quote means to repeat someone’s words, attributing them to their originator</strong> </p>
+            </h6>
+            <div class="col-md-6">
+                <div *ngFor='let quote of quotes;let i=index'>
+                    <h4 id={{i}} appHighlight>{{quote.name}} posted on{{quote.completeDate|date}}</h4>
+                    <button (click)='toggleDetails(i)' class="btn btn-success">Toggle Details</button>
+                    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (IsComplete)='deleteQuote($event,i)'>
+                    </app-quote-detail>
+                </div>
             </div>
+            <app-quote-form (addQuote)='onSubmit($event)'></app-quote-form>
         </div>
-        <app-quote-form (addQuote)='onSubmit($event)'></app-quote-form>
-    </div>
 
-</div>
+    </div>

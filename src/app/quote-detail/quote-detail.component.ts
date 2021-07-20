@@ -12,30 +12,27 @@ export class QuoteDetailComponent implements OnInit {
   @Input() quote: any;
   @Output() IsComplete = new EventEmitter<boolean>();
 
-  QuoteDelete(complete: boolean) {
+  quoteDelete(complete: boolean) {
     this.IsComplete.emit(complete);
   }
-  liked: boolean = true;
-  unliked: boolean = true;
+  liked: number = 0;
+  unliked: number = 0;
+  
   upVote() {
-    if (this.liked) {
-      this.quote.upVote++;
-      this.liked = false;
-    } else {
-      this.quote.upVote--;
-      this.liked = true;
-    }
-  }
+   
+      
+      return this.liked  ++;
+    } 
+
+    
+ 
 
   downVote() {
-    if (this.unliked) {
-      this.quote.downVote--;
-      this.unliked = false;
-    } else {
-      this.quote.downVote++;
-      this.unliked = true;
-    }
-  }
+    
+     
+      return this.unliked ++;
+    } 
+  
   
   constructor() { }
 

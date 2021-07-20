@@ -1,6 +1,6 @@
 <p>{{quote.description}}</p>
 <p>The quote was posted {{quote.completeDate|postedDate}} days ago.</p>
 <p>This quote was posted by {{quote.author}}.</p>
-<button (click)='QuoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
-<button class="btn btn-secondary upName" (click)='upVote()'>upVote <span>{{quote.upVote}}</span></button>
-<button class="btn btn-secondary" (click)='downVote()'>downVote <span>{{quote.downVote}}</span></button>
+<button (click)='quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<button class="btn btn-secondary upName" (click)='upVote()'>upVote</button> <span>{{liked}}</span>
+<button class="btn btn-secondary" (click)='downVote()'>downVote</button> <span>{{unliked}}</span>
