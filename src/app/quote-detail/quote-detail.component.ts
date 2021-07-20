@@ -36,7 +36,7 @@ export class QuoteDetailComponent implements OnInit {
       this.unliked = true;
     }
   }
-
+  
   constructor() { }
 
   ngOnInit(): void {
