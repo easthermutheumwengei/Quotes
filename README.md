@@ -13,7 +13,7 @@ This an application where users can create quotes and have those quotes voted on
 
 ## Live Demo
 
-[Live Demo Link](https://saretoduncan.github.io/Quote-web-app/)
+[Live Demo Link](https://easthermutheumwengei.github.io/Quotes/)
 
 ## Getting Started
 
@@ -28,7 +28,7 @@ A computer with a working and up to date web browser.
 - Clone the repository to your folder of choice using Git (or just download all the files)
 
 ```
-$ git clone https://github.com/saretoduncan/Quote-web-app.git
+$ git clone https://github.com/easthermutheumwengei/Quotes.git
 
 ```
 
@@ -49,17 +49,15 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 👤 **Author**
 
-By Duncan Kipkosgei Moiyo
+By Eather Mutheu
 
-- GitHub: [@saretoduncan](https://github.com/saretoduncan)
-- twitter: [@duncan_sareto](https://twitter.com/duncan_sareto)
-- email: <a href="mailto:duncan.moiyo@student.moringaschool.com"> mail📪</a>
+- GitHub: [@easthermutheumwengei](hhttps://github.com/easthermutheumwengei)
+- twitter: [@dylandaxy](https://twitter.com/dylandaxy)
+- email: <a href="mailto:easther.mwengei@student.moringaschool.com"> mail📪</a>
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](./src/assets/ISSUE_TEMPLATE/feature_request.md).
 
 ## Further help
 
